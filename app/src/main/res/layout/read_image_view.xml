@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+    <RelativeLayout
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:background="#000"
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="返回"
+            android:id="@+id/read_image_view_txt_back"
+            android:layout_centerInParent="true"
+            android:textSize="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:id="@+id/read_image_view_txt_save"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="保存至本地"
+            android:layout_centerInParent="true"
+            android:textSize="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="#ffffff"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:scaleType="matrix"
+        android:id="@+id/read_image_view_img"/>
+        <ProgressBar
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/read_image_view_pb"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</LinearLayout>
