@@ -51,13 +51,17 @@ public class PageActivity extends Activity implements View.OnTouchListener,View.
     TextView txt;
     List<Map<String,Object>> list=new ArrayList<Map<String,Object>>();
     Map<String,Object> map;
+    Map<String,Bitmap> bitmapMap;
     ImgTask imgTask;
     int page=0;//当前为第一页
+    //ImageLoader imageLoader=new ImageLoader();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lay_page);
+        bitmapMap=new HashMap<String,Bitmap>();
         initView();
+
     }
 
     @Override
@@ -170,6 +174,16 @@ public class PageActivity extends Activity implements View.OnTouchListener,View.
     }
 
 
+    private void loadImage(final String url){
+//        Bitmap bitmap=imageLoader.loadBitmap(url, new ImageLoader.CallImageBack() {
+//            @Override
+//            public void getBitmap(Bitmap bitmap) {
+//                bitmapMap.put(url,bitmap);
+//            }
+//        });
+
+    }
+
 
 
     Runnable runnable=new Runnable(){
@@ -225,7 +239,6 @@ public class PageActivity extends Activity implements View.OnTouchListener,View.
 
         @Override
         protected Bitmap doInBackground(String... params) {
-
             try{
                 if(isCancelled()){
                     return null;

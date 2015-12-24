@@ -19,12 +19,15 @@
         <activity android:name=".ReadImageView"/>
 
         <activity android:name=".PageActivity">
+
+            </activity>
+        <activity android:name=".TopActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            </activity>
+        </activity>
     </application>
 
 </manifest>
